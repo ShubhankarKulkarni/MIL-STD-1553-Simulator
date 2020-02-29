@@ -7,7 +7,7 @@ import time
 
 class Remote_Terminal:
 
-    def _send_data_to_bc(self, frames):
+    def send_data_to_bc(self, frames):
         for frame in frames:
             RT_Sender().send_message(bytes(frame))
             time.sleep(1)
@@ -16,7 +16,7 @@ class Remote_Terminal:
         frames = \
             MessageLayerAnalyzerRT().interprete_incoming_frame(frame)
         if frames:
-            self._send_data_to_bc(frames)
+            self.send_data_to_bc(frames)
 
     def start_listener(self):
         listener = RT_Listener()

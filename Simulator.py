@@ -47,6 +47,8 @@ if __name__ == "__main__":
     # BC_Sender().send_message("10000001000000000011")
 
     try:
+        """ Use following threads if you are running all the 
+            simulators on the same machine """
         # bc_listener_thread = threading.Thread(
         #     target=Bus_Controller().start_listener)
         # bc_listener_thread.start()
